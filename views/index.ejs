@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>index</title>
+		<link rel='stylesheet' href='/stylesheets/style.css' />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+	<body>
+		<section class="messages">
+		<p id="status">Stay online to track your score, for offline support enable JavaScript</p>
+		</section>
+		<section class="team team1">
+			<h1 id="scoreTeam1"><%= team1Points %></h1>
+			<h2>Team 1</h2>
+		</section>
+		<section class="team team2">
+			<h1 id="scoreTeam2"><%= team2Points %></h1>
+			<h2>Team 2</h2>
+		</section>
+		<section class="midtext team">
+			<h2>Wedstrijd 1/3 TIME: 90:00</h2>
+		</section>
+		<section class="team team1Control team1">
+      <h2>Score:</h2>
+      <form method="POST" action="/plus-team1" id='formPlusTeam1'>
+			<button type='submit' class='score' id='plusTeam1'>+</button>
+			</form>
+      <form method="POST" action="/minus-team1" id='formMinusTeam1'>
+      <button type='submit' class="score" id='minusTeam1'>-</button>
+      </form>
+		</section>
+		<section class="team team2Control team2">
+      <h2>Score:</h2>
+      <form method="POST" action="/plus-team2" id='formPlusTeam2'>
+			<button type='submit' class="score" id='plusTeam2'>+</button>
+      </form>
+      <form method="POST" action="/minus-team2" id='formMinusTeam2'>
+      <button type='submit' class="score" id='minusTeam2'>-</button>
+      </form>
+		</section>
+	</body>
+	<script src="./javascripts/index.js"></script>
+</html>

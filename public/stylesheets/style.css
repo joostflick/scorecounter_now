@@ -1,0 +1,61 @@
+body {
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+:root {
+  --color-team1: red;
+  --color-team2: green;
+  --color-main: blue;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 5% 45% 10% 40%;
+  margin: 0;
+}
+
+h1 {
+  font-size: 6em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+@supports (display: flex) {
+  .team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.team1 {
+  background-color: var(--color-team1, red);
+}
+
+.team2 {
+  background-color: var(--color-team2, green);
+}
+
+.midtext {
+  grid-column-end: span 2;
+  text-align: center;
+  color: white;
+  background-color: var(--color-main, blue);
+}
+
+.messages {
+  grid-column-end: span 2;
+  text-align: center;
+  color: white;
+  background-color: var(--color-main, blue);
+}
+
+button {
+  height: 5em;
+  width: 5em;
+}
